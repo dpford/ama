@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if error %}
+    <p style="color: red;">Please submit a search term.</p>
+{% endif %}
+
+<form action="" method="post">
+{% csrf_token %}
+
+Enter reddit AMA URL here: 
+<input type="text" name="url" id="amasearch"> 
+<input type="submit" value="Create Q&A">
+</form>
+
+    <p>{{url.amaurl}}</p>
+
+{% endblock %}

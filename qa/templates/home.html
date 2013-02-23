@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div id="explainbox">
+<p>Instructions:</p>
+<p>Enter the URL for a reddit Ask Me Anything (AMA) post into the box and click "Create Q&A".  Get your reddit AMA url <a href="http://www.reddit.com/r/iama">here</a>.</p>
+<p>AMA2Q&A will then sift through comments in the reddit post, extract the questions that were answered by the Original Poster (OP), then present you with a nicer looking Q&A format.</p>
+</div>
+<div id="formsubmit">
+<form action="/" method="post">
+{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="Create Q&A">
+</form>
+</div>
+
+{% endblock %}

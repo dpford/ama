@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+{% for qa in all_qas %}
+<div class="question">
+    <p>
+        {{ qa.question }}
+    </p>
+</div>
+<div class="answer">
+    <p>
+        {{ qa.answer }}
+    </p>
+</div>
+{% endfor %}
+
+
+{% endblock %}
